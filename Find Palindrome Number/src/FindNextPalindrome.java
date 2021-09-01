@@ -25,9 +25,9 @@ public class FindNextPalindrome {
 		}
 	}
 
-	/**
+	/***
 	 * Check length function checks length of the number entered by the user
-	 *
+	 *  
 	 * @author Sharmik Hirpara
 	 * @since 01/09/2021
 	 */
@@ -39,7 +39,7 @@ public class FindNextPalindrome {
 			findNextPlaindromeForOddLengthedNumber(number);
 	}
 
-	/**
+	/***
 	 * This function finds the palindrome for even lengthed number
 	 *
 	 * @author Sharmik Hirpara
@@ -56,7 +56,7 @@ public class FindNextPalindrome {
 		int finalNumber = Integer.parseInt(result.toString());
 		
 		if(finalNumber > number)
-			System.out.println("The next palindrome of " + number + " is " + finalNumber +"\n");
+			System.out.println("The next palindrome number is " + finalNumber +"\n");
 		else {
 			int firstHalf = Integer.valueOf(result.substring(0, originalString.length()/2));
 			int oldLength = String.valueOf(firstHalf).length();
@@ -76,7 +76,7 @@ public class FindNextPalindrome {
 		}
 	}
 
-	/**
+	/***
 	 * This function finds the palindrome for odd lengthed number
 	 *
 	 * @author Sharmik Hirpara
@@ -95,13 +95,13 @@ public class FindNextPalindrome {
 		int finalNumber = Integer.parseInt(result.toString());
 		
 		if(finalNumber > number)
-			System.out.println("The next palindrome of " + number + " is " + finalNumber +"\n");
+			System.out.println("The next palindrome number is " + finalNumber +"\n");
 		else {
 			int numberAtMidPos = Integer.parseInt(String.valueOf(result.charAt(originalString.length()/2)));
 			if (numberAtMidPos < 9) {
 				result.replace(originalString.length()/2, originalString.length()/2 + 1, String.valueOf(numberAtMidPos + 1));
 				finalNumber = Integer.parseInt(result.toString());
-				System.out.println("The next palindrome of " + number + " is " + finalNumber +"\n");
+				System.out.println("The next palindrome number is " + finalNumber +"\n");
 			}
 			else {
 				int numberTillMidPos = Integer.valueOf(result.substring(0, originalString.length()/2 + 1));
